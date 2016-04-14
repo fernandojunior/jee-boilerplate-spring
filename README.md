@@ -11,8 +11,6 @@ Boilerplate to create a JEE web application using the classic approach.
     * JSP==2.2
     * EL==2.2
     * WebSocket==1.1
-* [JSTL](https://tomcat.apache.org/taglibs/standard/)==1.2
-    * jstl-1.2.jar==1.2
 * [JUnit](https://github.com/junit-team/junit4/wiki/Download-and-Install)==4.12
     * junit-4.12.jar
     * hamcrest-core-1.3.jar
