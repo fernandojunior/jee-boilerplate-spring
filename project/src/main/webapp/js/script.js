@@ -1,73 +1,64 @@
-angular.module("app", []).controller("MainController", function($scope, $http) {
-	$scope.all = function() {
-		$http.get('/project/user/').success(function(data) {
-			$scope.users = data;
-		});
-	}
-	$scope.all();
-});
+angular.module("app", []).controller(
+		'MainController',
+		[
+				"$scope",
+				"$http",
+				"$timeout",
+				function($scope, $http, $timeout) {
 
-angular
-		.module("app")
-		.controller(
-				'help',
-				[
-						"$scope",
-						"$http",
-						"$timeout",
-						function($scope, $http, $timeout) {
+					$scope.all = function() {
+						$http.get('/project/user/').success(function(data) {
+							$scope.users = data;
+						});
+					}
 
-							// Form submit handler.
-							$scope.submit = function(form) {
+					$scope.all();
 
-								// Trigger validation flag.
-								$scope.submitted = true;
+					// Form submit handler.
+					$scope.submit = function(form) {
 
-								// If form is invalid, return and let AngularJS
-								// show validation errors.
-								if (form.$invalid) {
-									return;
-								}
+						// Trigger validation flag.
+						$scope.submitted = true;
 
-								var context = {
-									'name' : $scope.name,
-									'email' : $scope.email,
-									'phone' : $scope.phone,
-								};
+						// If form is invalid, return and let AngularJS
+						// show validation errors.
+						if (form.$invalid) {
+							return;
+						}
 
-								console.log(context);
+						var context = {
+							'name' : $scope.name,
+							'email' : $scope.email,
+							'phone' : $scope.phone,
+						};
 
-								var scope = $scope;
+						console.log(context);
 
-								var res = jQuery
-										.post(
-												'/project/user/',
-												context,
-												function(data, status) {
-													console.log(data);
-													console.log(status);
+						var scope = $scope;
 
-													$scope.name = null;
-													$scope.email = null;
-													$scope.phone = null;
-													scope.messages = 'Your form has been sent!';
-													$scope.submitted = false;
+						var res = jQuery.post('/project/user/', context,
+								function(data, status) {
+									console.log(data);
+									console.log(status);
+									scope.messages = 'User has been created!';
+									$scope.all();
+									$scope.name = null;
+									$scope.email = null;
+									$scope.phone = null;
+									$scope.submitted = false;
 
-												});
-
-								res
-										.fail(function(data, status, headers,
-												config) {
-											console
-													.log(data.responseJSON.message);
-											scope.messages = data.responseJSON.message;
-										});
-								res.always(function() {
-									// Hide status messages after three seconds.
-									$timeout(function() {
-										$scope.messages = null;
-									}, 3000);
 								});
 
-							};
-						} ]);
+						res.fail(function(data, status) {
+							console.log(data.responseJSON.message);
+							scope.messages = data.responseJSON.message;
+						});
+						res.always(function() {
+							// Hide status messages after three seconds.
+							$timeout(function() {
+								$scope.messages = null;
+							}, 3000);
+						});
+
+					};
+				} ]);

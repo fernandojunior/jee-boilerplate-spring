@@ -26,10 +26,10 @@
 	
 	<hr/>
 
-	<main>
+	<main ng-controller="MainController as main">
 	<div class="container">
 
-		<session class="row" data-ng-controller="help">
+		<session class="row">
 
 			<div id="messages" class="alert alert-success" data-ng-show="messages"
 				data-ng-bind="messages"></div>
@@ -62,7 +62,7 @@
 			</form>
 		</section>
 
-		<section ng-controller="MainController as main">
+		<section>
 		
 			<div class="row" ng-repeat="user in users">
 				<div class="col-md-6">{{ user.name }} {{ user.email }} {{
