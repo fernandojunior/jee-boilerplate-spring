@@ -2,16 +2,16 @@
 
 ## Features
 
-Java: 1.7
-Tomcat: 7.0.68
-Spring Tool Suite: 3.7.3.RELEASE
-Spring Boot: (JPA, Rest, Repository, etc.)
-AngularJS: 1.5.3
-Bootstrap: 3.3.6
-jQuery: 2.2.3
-Font Awesome: 4.6.1
-Gerenciador de pacotes: Maven: 4.0.0
-LocalStorage: Hibernate/JPA/H2
+- Java: 1.7
+- Tomcat: 7.0.68
+- Spring Tool Suite: 3.7.3.RELEASE
+- Spring Boot: (JPA, Rest, Repository, etc.)
+- AngularJS: 1.5.3
+- Bootstrap: 3.3.6
+- jQuery: 2.2.3
+- Font Awesome: 4.6.1
+- Gerenciador de pacotes: Maven: 4.0.0
+- LocalStorage: Hibernate/JPA/H2
 
 ## Contributing
 
