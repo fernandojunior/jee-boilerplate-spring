@@ -31,12 +31,16 @@
 	<div class="container">
 
 		<session class="row">
+		
+			
 
 			<div id="messages" class="alert alert-success" data-ng-show="messages"
 				data-ng-bind="messages"></div>
+				
+			<i class="fa fa-user fa-6 col-md-4" aria-hidden="true"></i>
 	
 			<form name="helpForm" novalidate role="form"
-				class="form-horizontal col-md-4 col-md-offset-4">
+				class="form-horizontal col-md-4">
 				<div class="form-group">
 					<label for="name"></label> <span class="label label-danger"
 						data-ng-show="submitted && helpForm.name.$error.required">Required!</span>

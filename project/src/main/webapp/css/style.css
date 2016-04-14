@@ -7,3 +7,7 @@ header h1, header h2 {
 header h2 {
 	font-size: 20px;
 }
+
+.fa-user {
+	font-size: 5cm;
+}
