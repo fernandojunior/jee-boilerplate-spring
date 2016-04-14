@@ -32,8 +32,6 @@ angular.module("app", []).controller(
 							'phone' : $scope.phone,
 						};
 
-						console.log(context);
-
 						var scope = $scope;
 
 						var res = jQuery.post('/project/user/', context,
