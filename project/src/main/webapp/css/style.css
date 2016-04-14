@@ -9,5 +9,23 @@ header h2 {
 }
 
 .fa-user {
-	font-size: 5cm;
+	font-size: 4cm;
+	text-align: center;
+}
+
+.panel {
+	border: 1px solid transparent;
+}
+
+main .container {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+button {
+	vertical-align: bottom;
+}
+
+main ul {
+	display: inline-block;
 }
