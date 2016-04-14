@@ -23,17 +23,13 @@
 			<h1>Hello World</h1>
 		</div>
 	</header>
-
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container">
-			<div class="navbar-brand">Hello World</div>
-		</div>
-	</nav>
+	
+	<hr/>
 
 	<main>
 	<div class="container">
 
-		<session class="row container" data-ng-controller="help">
+		<session class="row" data-ng-controller="help">
 
 			<div id="messages" class="alert alert-success" data-ng-show="messages"
 				data-ng-bind="messages"></div>
@@ -57,7 +53,7 @@
 				<div class="form-group">
 					<label for="phone"></label> <span class="label label-danger"
 						data-ng-show="submitted && helpForm.phone.$error.required">Required!</span>
-					<input type="text" name="phone" placeholder="Phone number"
+					<input type="text" name="phone" placeholder="Phone number: (132)123-1234"
 						ng-model="phone" class="form-control" required />
 				</div>
 	
@@ -66,7 +62,7 @@
 			</form>
 		</section>
 
-		<section ng-controller="MainController as main" class="container">
+		<section ng-controller="MainController as main">
 		
 			<div class="row" ng-repeat="user in users">
 				<div class="col-md-6">{{ user.name }} {{ user.email }} {{
@@ -75,13 +71,6 @@
 		</section>
 	</div>
 	</main>
-
-	<footer class="footer">
-		<div class="container">
-			<span class=""> &copy; 2016 Fernando Felix do Nascimento
-				Junior </span>
-		</div>
-	</footer>
 
 	<!-- jQuery -->
 	<script src="js/jquery-2.2.3.js"></script>
